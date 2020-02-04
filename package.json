@@ -1,0 +1,57 @@
+{
+  "name": "react-with-hocs",
+  "version": "0.1.0",
+  "description": "A helper to compose React HOCs",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.es.json",
+    "version": "npm run test && npm run build && conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "commit": "git-cz",
+    "test": "npm run unit-test && npm run type-test",
+    "unit-test": "sh default -d \"src/**/*.spec.*\" -c tape",
+    "type-test": "tsd",
+    "tape": "ts-node node_modules/tape/bin/tape",
+    "w": "nodemon -e js,jsx,ts,tsx,json --exec npm run"
+  },
+  "keywords": [
+    "react",
+    "hocs"
+  ],
+  "author": "lebedev.mv <lebedev.mv@tutu.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/sinon": "^7.5.1",
+    "@types/tape": "^4.2.33",
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.25",
+    "cz-conventional-changelog": "^3.0.2",
+    "sinon": "^8.1.0",
+    "tape": "^4.11.0",
+    "ts-node": "^8.4.1",
+    "tsd": "^0.11.0",
+    "typescript": "^3.7.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megazazik/react-with-hocs.git"
+  },
+  "homepage": "https://github.com/megazazik/react-with-hocs",
+  "files": [
+    "dist",
+    "dist/index.d.ts",
+    "dist-es",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "tsd": {
+    "directory": "src/tests-d"
+  },
+  "dependencies": {}
+}
