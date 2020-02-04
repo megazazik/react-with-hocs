@@ -1,6 +1,6 @@
 {
   "name": "react-with-hocs",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A helper to compose React HOCs",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,11 +17,13 @@
   },
   "keywords": [
     "react",
-    "hocs"
+    "hocs",
+    "typescript"
   ],
   "author": "lebedev.mv <lebedev.mv@tutu.ru>",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^16.9.19",
     "@types/sinon": "^7.5.1",
     "@types/tape": "^4.2.33",
     "commitizen": "^4.0.3",
@@ -52,6 +54,5 @@
   ],
   "tsd": {
     "directory": "src/tests-d"
-  },
-  "dependencies": {}
+  }
 }
