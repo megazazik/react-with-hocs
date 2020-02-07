@@ -1,3 +1,6 @@
+# VS code folder
+.vscode
+
 dist
 dist-es
 node_modules
