@@ -32,14 +32,6 @@ export interface Compose<P> {
     h5: Hoc<H4, H5>,
     h6: Hoc<H5, H6>
   ): ComponentType<H6>;
-  <H1, H2, H3, H4, H5, H6>(
-    h1: Hoc<P, H1>,
-    h2: Hoc<H1, H2>,
-    h3: Hoc<H2, H3>,
-    h4: Hoc<H3, H4>,
-    h5: Hoc<H4, H5>,
-    h6: Hoc<H5, H6>
-  ): ComponentType<H6>;
   <H1, H2, H3, H4, H5, H6, H7>(
     h1: Hoc<P, H1>,
     h2: Hoc<H1, H2>,
@@ -109,9 +101,10 @@ export interface Compose<P> {
     h11: Hoc<H10, H11>,
     h12: Hoc<H11, H12>
   ): ComponentType<H12>;
+  <T, R>(...hocs: Hoc<T, R>[]): ComponentType<R>;
 }
 
-export default function<P>(Component: ComponentType<P>): Compose<P> {
+export default function <P>(Component: ComponentType<P>): Compose<P> {
   return (...hocs: Array<Hoc<any, any>>) =>
     hocs.reduce((prev, hoc) => hoc(prev), Component);
 }
