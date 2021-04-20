@@ -104,7 +104,9 @@ export interface Compose<P> {
   (...hocs: Hoc<any, any>[]): ComponentType<any>;
 }
 
-export default function t<P>(Component: ComponentType<P>): Compose<P> {
+export function withHocs<P>(Component: ComponentType<P>): Compose<P> {
   return (...hocs: Array<Hoc<any, any>>) =>
     hocs.reduce((prev, hoc) => hoc(prev), Component);
 }
+
+export default withHocs;
