@@ -1,3 +1,12 @@
+# [1.0.0](https://github.com/megazazik/react-with-hocs/compare/v0.1.1...v1.0.0) (2021-04-20)
+
+
+### Bug Fixes
+
+* fixed foo name ([5019ea0](https://github.com/megazazik/react-with-hocs/commit/5019ea050b2a8e846d29125bf1178a21e0fc857b))
+
+
+
 ## [0.1.1](https://github.com/megazazik/react-with-hocs/compare/v0.1.0...v0.1.1) (2020-02-07)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "react-with-hocs",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A helper to compose React HOCs",
   "main": "dist/index.js",
   "module": "dist-es/index.js",
